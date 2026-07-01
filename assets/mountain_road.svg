@@ -1,0 +1,182 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a1a0a"/>
+      <stop offset="50%" style="stop-color:#1a3a1a"/>
+      <stop offset="100%" style="stop-color:#2a4a2a"/>
+    </linearGradient>
+    <!-- Mountain gradient -->
+    <linearGradient id="mtn" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a3a1a"/>
+      <stop offset="100%" style="stop-color:#0d260d"/>
+    </linearGradient>
+    <!-- Road color -->
+    <linearGradient id="road" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4a6a4a"/>
+      <stop offset="50%" style="stop-color:#5a7a5a"/>
+      <stop offset="100%" style="stop-color:#3a5a3a"/>
+    </linearGradient>
+    <!-- Glow filter -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <!-- Star filter -->
+    <filter id="starGlow">
+      <feGaussianBlur stdDeviation="1.5"/>
+    </filter>
+  </defs>
+
+  <!-- Background sky -->
+  <rect width="800" height="500" fill="url(#sky)"/>
+
+  <!-- Stars -->
+  <g fill="white" opacity="0.6">
+    <circle cx="50" cy="30" r="1.2"/><circle cx="150" cy="55" r="0.8"/>
+    <circle cx="250" cy="20" r="1.0"/><circle cx="350" cy="45" r="0.7"/>
+    <circle cx="450" cy="15" r="1.3"/><circle cx="550" cy="35" r="0.9"/>
+    <circle cx="650" cy="25" r="1.1"/><circle cx="750" cy="50" r="0.8"/>
+    <circle cx="100" cy="70" r="0.6"/><circle cx="700" cy="65" r="0.7"/>
+    <circle cx="300" cy="60" r="0.5"/><circle cx="500" cy="40" r="1.0"/>
+  </g>
+
+  <!-- Moon -->
+  <circle cx="680" cy="60" r="18" fill="#c8e6c9" opacity="0.3" filter="url(#glow)"/>
+  <circle cx="680" cy="60" r="14" fill="#e8f5e9" opacity="0.5"/>
+
+  <!-- Background mountains (distant) -->
+  <path d="M0 380 Q100 280 200 320 Q280 260 350 300 Q420 240 500 290 Q580 250 650 310 Q730 270 800 320 L800 500 L0 500Z" 
+        fill="#0f2e0f" opacity="0.5"/>
+
+  <!-- Main mountain body -->
+  <path d="M50 450 Q100 400 150 380 Q200 350 250 300 
+           Q300 230 350 180 Q380 130 400 80 
+           Q410 100 420 130 Q450 180 480 230 
+           Q530 290 580 330 Q630 370 680 390 
+           Q730 420 780 440 L800 450 L800 500 L0 500 L0 450Z" 
+        fill="url(#mtn)"/>
+
+  <!-- Mountain texture/highlight -->
+  <path d="M400 80 Q410 120 420 160 Q440 200 460 240 Q480 280 520 320" 
+        fill="none" stroke="#2a5a2a" stroke-width="1" opacity="0.4"/>
+  <path d="M400 80 Q390 120 380 160 Q360 200 340 240 Q310 280 280 310" 
+        fill="none" stroke="#2a5a2a" stroke-width="1" opacity="0.3"/>
+
+  <!-- === SPIRAL ROAD === -->
+  <!-- The road spirals up the mountain, visible on the front face -->
+  
+  <!-- Road base layer (wider, darker) -->
+  <g fill="none" stroke="#2a4a2a" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" opacity="0.3">
+    <!-- Bottom road segments -->
+    <path d="M130 440 Q160 420 200 410 Q240 400 270 380"/>
+    <path d="M310 370 Q340 350 380 340 Q420 330 450 310"/>
+    <path d="M470 290 Q500 270 530 250 Q560 230 580 210"/>
+  </g>
+
+  <!-- Road surface (lighter, visible) -->
+  <g fill="none" stroke="url(#road)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Switchback 1 - bottom -->
+    <path d="M100 450 Q140 435 180 425 Q220 415 250 395" />
+    <path d="M250 395 Q260 390 270 385" />
+    <path d="M270 385 Q300 370 330 358 Q360 345 380 330" />
+    
+    <!-- Switchback 2 - middle -->
+    <path d="M380 330 Q395 320 410 310" />
+    <path d="M410 310 Q440 290 470 272 Q500 255 520 238" />
+    <path d="M520 238 Q535 228 545 220" />
+    
+    <!-- Switchback 3 - upper -->
+    <path d="M545 220 Q565 205 580 190 Q590 180 595 170" />
+    <path d="M595 170 Q600 162 600 155" />
+    
+    <!-- Final ascent to peak -->
+    <path d="M600 155 Q590 140 570 125 Q540 110 510 100 Q470 90 430 85" />
+    <path d="M430 85 Q420 83 410 82" />
+  </g>
+
+  <!-- Road edge markings (dashed center line) -->
+  <g fill="none" stroke="#8cb88c" stroke-width="1.5" stroke-dasharray="4,6" opacity="0.6">
+    <path d="M180 425 Q220 415 250 395" />
+    <path d="M270 385 Q300 370 330 358 Q360 345 380 330" />
+    <path d="M410 310 Q440 290 470 272 Q500 255 520 238" />
+    <path d="M545 220 Q565 205 580 190" />
+    <path d="M600 155 Q590 140 570 125 Q540 110 510 100" />
+  </g>
+
+  <!-- Small car / dot on the road to show scale -->
+  <circle cx="250" cy="393" r="3" fill="#a8d8a8" opacity="0.8" filter="url(#glow)"/>
+
+  <!-- === WELCOMING PINE (黄山迎客松) at the peak === -->
+
+  <!-- Tree trunk - growing from the cliff at peak, leaning right -->
+  <g stroke="#4a7a4a" fill="none" stroke-linecap="round">
+    <!-- Main trunk growing from peak right side -->
+    <path d="M408 78 Q408 55 405 40 Q402 25 400 15" stroke-width="4"/>
+    
+    <!-- First branch - left (long, extending outward like welcoming arm) -->
+    <path d="M405 40 Q385 35 365 30 Q350 28 340 30" stroke-width="2.5"/>
+    <!-- Sub-branch left -->
+    <path d="M365 30 Q360 22 355 18" stroke-width="1.5"/>
+    
+    <!-- Second branch - right (shorter, upper) -->
+    <path d="M402 28 Q415 22 425 18 Q432 16 438 18" stroke-width="2"/>
+    
+    <!-- Third branch - top -->
+    <path d="M400 15 Q395 8 390 3" stroke-width="2"/>
+    <!-- Sub-branch top-right -->
+    <path d="M400 15 Q408 8 412 3" stroke-width="1.5"/>
+  </g>
+
+  <!-- Pine needles - left branch (the iconic welcoming gesture) -->
+  <g fill="#3a8a3a" opacity="0.8">
+    <ellipse cx="350" cy="28" rx="12" ry="4" transform="rotate(-15 350 28)"/>
+    <ellipse cx="340" cy="30" rx="8" ry="3" transform="rotate(-10 340 30)"/>
+    <ellipse cx="360" cy="25" rx="10" ry="3.5" transform="rotate(-20 360 25)"/>
+    <ellipse cx="370" cy="28" rx="7" ry="2.5" transform="rotate(-5 370 28)"/>
+    <ellipse cx="355" cy="20" rx="7" ry="2.5" transform="rotate(-25 355 20)"/>
+  </g>
+
+  <!-- Pine needles - right branch -->
+  <g fill="#3a8a3a" opacity="0.7">
+    <ellipse cx="430" cy="16" rx="10" ry="3" transform="rotate(15 430 16)"/>
+    <ellipse cx="425" cy="20" rx="8" ry="2.5" transform="rotate(10 425 20)"/>
+    <ellipse cx="438" cy="18" rx="6" ry="2" transform="rotate(20 438 18)"/>
+  </g>
+
+  <!-- Pine needles - top -->
+  <g fill="#4a9a4a" opacity="0.8">
+    <ellipse cx="388" cy="5" rx="10" ry="3" transform="rotate(-10 388 5)"/>
+    <ellipse cx="395" cy="2" rx="8" ry="2.5" transform="rotate(-5 395 2)"/>
+    <ellipse cx="412" cy="3" rx="6" ry="2" transform="rotate(15 412 3)"/>
+  </g>
+
+  <!-- Additional pine needles clusters -->
+  <g fill="#2a7a2a" opacity="0.6">
+    <ellipse cx="345" cy="35" rx="6" ry="2" transform="rotate(-20 345 35)"/>
+    <ellipse cx="380" cy="15" rx="6" ry="2" transform="rotate(-10 380 15)"/>
+    <ellipse cx="405" cy="10" rx="8" ry="2.5" transform="rotate(-5 405 10)"/>
+  </g>
+
+  <!-- Tree root gripping the cliff -->
+  <g stroke="#3a6a3a" fill="none" stroke-width="1.5" stroke-linecap="round" opacity="0.7">
+    <path d="M408 78 Q410 85 415 90"/>
+    <path d="M408 78 Q405 86 400 90"/>
+    <path d="M408 78 Q412 84 418 88"/>
+  </g>
+
+  <!-- Small clouds -->
+  <g fill="white" opacity="0.08">
+    <ellipse cx="200" cy="200" rx="60" ry="15"/>
+    <ellipse cx="230" cy="195" rx="40" ry="12"/>
+    <ellipse cx="600" cy="180" rx="50" ry="12"/>
+    <ellipse cx="150" cy="350" rx="70" ry="10"/>
+  </g>
+
+  <!-- Ground/grass at base -->
+  <g fill="none" stroke="#2a5a2a" stroke-width="1" opacity="0.4">
+    <path d="M0 470 Q50 465 100 470 Q150 475 200 470 Q250 465 300 470 Q350 475 400 470 Q450 465 500 470 Q550 475 600 470 Q650 465 700 470 Q750 475 800 470"/>
+    <path d="M0 480 Q50 475 100 480 Q150 485 200 480 Q250 475 300 480 Q350 485 400 480 Q450 475 500 480 Q550 485 600 480 Q650 475 700 480 Q750 485 800 480"/>
+  </g>
+
+</svg>
