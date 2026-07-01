@@ -71,8 +71,6 @@ Building the bridge between biological intelligence and AGI — one spiral at a 
 ### 📫 **Connect**
 
 [![Email](https://img.shields.io/badge/-jieyi12345@126.com-2e7d32?style=flat-square&logo=gmail&logoColor=white)](mailto:jieyi12345@126.com)
-[![Personal Site](https://img.shields.io/badge/-bravoxl.github.io-388e3c?style=flat-square&logo=github&logoColor=white)](https://bravoxl.github.io)
-[![LinkedIn](https://img.shields.io/badge/-LinkedIn-43a047?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/capitalzxl)
 
 <br>
 
