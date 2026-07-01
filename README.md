@@ -47,10 +47,10 @@ Building the bridge between biological intelligence and AGI — one spiral at a 
 ### 🌱 **Recent Projects**
 
 ```
-📡 EEG Decoding Pipeline   → MNE-Python · Time-series · Feature extraction
-🤖 ROS2 + SLAM             → Navigation · Perception · Point cloud
-⚡ SNN + Transformer Study → Next-gen architecture exploration
-🔌 STM32 Embedded Control  → C · Peripherals · PCB
+📡 EEG Decoding Pipeline → MNE-Python · Time-series · Feature Extraction
+🤖 ROS2 + SLAM → Navigation · Perception · Point Cloud
+⚡ SNN + Transformer Study → Next-Gen Architecture Exploration
+🔌 STM32 Embedded Control → C · Peripherals · PCB Optimization
 ```
 
 ---
